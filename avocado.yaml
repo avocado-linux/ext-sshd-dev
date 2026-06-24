@@ -2,7 +2,7 @@ supported_targets: '*'
 
 extensions:
   avocado-ext-sshd-dev:
-    version: 2024.1.0
+    version: 0.1.0
     release: r0
     summary: SSH server with root login
     description: SSH server that allows root login with no password. DO NOT USE IN PRODUCTION.
@@ -22,4 +22,4 @@ extensions:
       openssh: '*'
 
 sdk:
-  image: docker.io/avocadolinux/sdk:{{ env.AVOCADO_DISTRO_RELEASE }}-{{ env.AVOCADO_DISTRO_CHANNEL }}
+  image: docker.io/avocadolinux/sdk:{{ env.AVOCADO_DISTRO_RELEASE }}
