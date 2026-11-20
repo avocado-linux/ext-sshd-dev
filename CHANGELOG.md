@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   root; `/var` is writable and survives reboots and OS updates. Ship keys with
   the runtime's `var_files` or write them at provisioning.
 - CI builds against the 2026 feed as well as 2024.
+- A tmpfiles.d entry resets `/var/lib/ssh/authorized_keys.d` to root:root 0755
+  and its files to 0644, so keys shipped with `var_files` are not refused by
+  sshd's StrictModes when the build host's owner and mode were kept.
 
 ## [0.1.0]
 

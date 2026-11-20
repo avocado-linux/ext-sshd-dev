@@ -16,6 +16,7 @@ extensions:
       - sshd.socket
 
     on_merge:
+      - systemd-tmpfiles --create /usr/lib/tmpfiles.d/avocado-sshd-keys.conf
       - systemctl start --no-block sshd.socket
 
     packages:
